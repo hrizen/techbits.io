@@ -102,7 +102,7 @@ As the script was previously running as root, we end up with the same result, ex
 
 `npm install` is something that shouldn't be run as sudo. To run as the user from a root script, you could use: `su username -c "npm install something"`, but as the script is run as sudo, anything inside effectively has sudo, we'd need to drop it with `sudo -u username npm install something`.
 
-This is a lot more secure, and despite temporarily having a logged in user, it is an account that doesn't have elevated permissions.
+This is a lot more secure, and despite temporarily having a logged in user, it's an account that doesn't have elevated permissions.
 
 ## Cleaning up
 Once everything has run, we can remove the sudo permission, the autologin and the command from .profile:
